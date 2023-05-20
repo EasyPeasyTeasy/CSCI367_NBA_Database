@@ -1,0 +1,44 @@
+<html>
+<title> NBA Tip-Off </title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='tipoff.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<body>
+   
+<!--Navigation Bar-->
+  <div class="logo">
+    <h1> NBA TIP-OFF </h1>
+  </div>
+   <span id="close"> </span>
+  <span id="menu"> <img style="width: 25px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11WXR-a18XfNZknL7S4lu0lLyC4aWZPY4sLd4wNHUNv9So2gd" alt="MENU"> </span>
+  <nav>
+    <ul>
+      <li> <a href="#"> HOME </a> </li>
+      <li> <a href="#"> PLAYERS </a> </li>
+      <li> <a href="#"> TEAMS </a> </li>
+      <li> <a href="#"> COMPARE </a> </li>
+    </ul>
+  </nav>
+<!--Navigation Bar-->
+
+
+<!--Hero Image-->
+  <header>
+    <div class="header-text">
+    <h1> WELCOME TO <br><span id="photography"> NBA TIP-OFF </span></h1>
+    <p> This is a basketball database that allows users to search for NBA players or teams past and present to compare the statistics! To get started choose either to compare players or teams and add them to your compare list.  </p>
+    <button> Search Players </button>
+    <button> Search Teams </button>
+    </div>
+  </header>
+  <!--Hero Image-->
+  
+</body>
+<script src={{ url_for('static', filename='jquery.js') }} type="text/javascript"></script>
+<script src={{ url_for('static', filename='tipoffstyle.js') }}></script>
+</html>
