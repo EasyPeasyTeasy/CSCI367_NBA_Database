@@ -1,0 +1,72 @@
+<html>
+<title> NBA Tip-Off </title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='tipoff.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<body>
+   
+<!--Navigation Bar-->
+  <div class="logo">
+    <h1> NBA TIP-OFF </h1>
+  </div>
+   <span id="close"> </span>
+  <span id="menu"> <img style="width: 25px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11WXR-a18XfNZknL7S4lu0lLyC4aWZPY4sLd4wNHUNv9So2gd" alt="MENU"> </span>
+  <nav>
+    <ul>
+      <li> <a href="/home"> HOME </a> </li>
+      <li> <a href="/player"> PLAYERS </a> </li>
+      <li> <a href="/teams"> TEAMS </a> </li>
+      <li> <a href="/compare"> COMPARE </a> </li>
+    </ul>
+  </nav>
+<!--Navigation Bar-->
+<header>
+    <h1>
+<div class="container">
+    <div class="row">
+      
+  
+      <div class="col-12">
+      <p class="lead text-center d-block m-auto ">NBA Player Filter Table</p>
+      </div>
+      
+      
+      
+      <input type="text" placeholder="" id="search" class="form-control mt-4 mb-2   w-75  d-inline">
+      <i title="clear search" id="clearInput" class=" fa fa-times"></i>
+      <select title="search by" class="form-control mt-4 mb-2  w-25 d-inline" name="exampleSelect1" id="exampleSelect1">
+        
+  
+      </select>
+      
+      
+  
+      
+  <table  class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col" target="id">ID <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
+        <th scope="col" target="name">First Name <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></i></th>
+        <th scope="col" target="job">Job <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
+        <th scope="col" target="age">Age <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
+      </tr>
+    </thead>
+    <tbody id="results">
+     
+    </tbody>
+    
+  </table>
+    </div>
+  </div>
+</h1>
+</header>
+
+</body>
+<script src={{ url_for('static', filename='jquery.js') }} type="text/javascript"></script>
+<script src={{ url_for('static', filename='playertable.js') }}></script>
+</html>
