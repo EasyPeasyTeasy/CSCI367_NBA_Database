@@ -1,4 +1,15 @@
 <html>
+
+<style>
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    text-align: center;
+  }
+</style>
+
 <title> NBA Tip-Off </title>
 <head>
   <meta charset="utf-8">
@@ -66,11 +77,23 @@
       <table  class="player_table">
         <thead>
           <tr>
-            <th scope="col" target="id">Compare <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
-            <th scope="col" target="name"> Season Year <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></i></th>
-            <th scope="col" target="team">Team Name<i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
-            <th scope="col" target="team">Team Conference<i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
-            <th scope="col" target="team">Team Division<i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
+            <th scope="col" target="id">Compare</th>
+            <th scope="col" target="name"> Season Year</th>
+            <th scope="col" target="team">Team Name</th>
+            <th scope="col" target="team">Team Conference</th>
+            <th scope="col" target="team">Team Division</th>
+            <th scope="col" target="team">
+              <a href="/teams?season_year={{season_year_contains}}&team_name={{team_contains}}&team_conference={{team_conference_contains}}&team_division={{team_division_contains}}&sort_dir={{get_sort_dir()}}&pagenumber={{page_number}}">Conference Rank</a>
+              {% if get_sort_dir() == 'asc' %}
+               ↑
+              {% else %}
+               ↓
+              {% endif %}
+            </th>
+            <th scope="col" target="team">Division Rank</th>
+            <th scope="col" target="team">Points Rank</th>
+            <th scope="col" target="team">Rebound Rank</th>
+            <th scope="col" target="team">Assist Rank</th>
           </tr>
         </thead>
         <tbody id="results">
@@ -81,6 +104,11 @@
               <td>{{result.team_name}}</td>
               <td>{{result.team_conference}}</td>
               <td>{{result.team_division}}</td>
+              <td>{{result.conf_rank}}</td>
+              <td>{{result.div_rank}}</td>
+              <td>{{result.pts_rank}}</td>
+              <td>{{result.reb_rank}}</td>
+              <td>{{result.ast_rank}}</td>
             </tr>
          {% endfor %}
         </tbody>

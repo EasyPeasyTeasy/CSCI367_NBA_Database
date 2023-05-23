@@ -5,6 +5,7 @@ def search_team(cur: cursor,
                   team_name_contains: str,
                   team_conference_contains: str,
                   team_division_contains: str,
+                  sort_dir: str,
                   offset:int) -> list[dict[str,str]]:
     
     cur.execute(
@@ -12,12 +13,18 @@ def search_team(cur: cursor,
         SELECT season_year,
             team_name,
             team_conference,
-            team_division
+            team_division,
+            conf_rank,
+            div_rank,
+            pts_rank,
+            reb_rank,
+            ast_rank
         FROM teams_info_common
         WHERE LOWER(season_year) LIKE LOWER(%(season_year_param)s)
             AND LOWER(team_name) LIKE LOWER(%(team_name_param)s)
             AND LOWER(team_conference) LIKE LOWER(%(team_conference_param)s)
             AND LOWER(team_division) LIKE LOWER(%(team_division_param)s)
+        order by conf_rank {sort_dir}
         limit 25
         offset {offset}
         """,
