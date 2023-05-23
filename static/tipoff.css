@@ -209,4 +209,27 @@
     }
   }
   /*Hero Image*/
+
+  .toggleSort {cursor: pointer;}
+  #clearInput {
+    position:absolute;
+    float:right;
+    top: 65px;
+    right: 33%;
+    color: rgb(255, 128, 0);
+    clear: both;
+    cursor: pointer;
+  }
+
+  table {
+    font-size: 10px;
+  }
+  
+
+  .row {
+    background-color: rgba(229, 180, 121, 0.513);
+    border-radius: 15px;
+    padding: 20px;
+  }
+
   

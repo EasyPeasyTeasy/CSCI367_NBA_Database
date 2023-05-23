@@ -81,7 +81,7 @@ if (InputVal.addEventListener) {
   const v = InputVal.value;//input value  
     
   //set placeholder of input to what user selected to search for  
-  InputVal.setAttribute("placeholder", "Search NBA Players by " + SelectedSearchVal +" ");
+  InputVal.setAttribute("placeholder", "Search NBA Teams by " + SelectedSearchVal +" ");
     
   results.innerHTML="";
    
