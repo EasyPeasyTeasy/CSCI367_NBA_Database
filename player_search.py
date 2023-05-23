@@ -3,7 +3,7 @@ from psycopg2.extensions import cursor
 def search_player(cur: cursor, 
                   player_name_contains: str,
                   position_contains: str,
-                  team_name_contains: str, 
+                  team_name_contains: str,
                   jersey:str,
                   offset:int) -> list[dict[str,str]]:
     

@@ -43,7 +43,7 @@ def player():
 
 @app.route('/teams')
 def teams():
-     with conn.cursor() as curr:
+    with conn.cursor() as curr:
         season_year_contains = request.args.get("season_year", "")
         team_name_contains = request.args.get("team_name", "")
         team_conference_contains = request.args.get("team_conference", "")
