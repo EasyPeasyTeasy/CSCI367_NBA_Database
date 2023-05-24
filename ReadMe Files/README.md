@@ -1,9 +1,20 @@
-# Postgres-backed Flask Server Template
+![NBA Tip-Off Home Page](/workspace/ReadMe Files/NBAtipoffhomepage.png)
 
-This is a template repository for setting up a basic Flask app backed by a Postgres database.
+# NBA Tip-Off: A Basketball Stats Database Website
 
-## Developing in VS Code with the Remote Development Extension Pack
+Welcome to the NBA Tip-Off, a Basketball Stats Database Website repository! This website provides a comprehensive collection of NBA player statistics, allowing users to explore player and team data, compare player and team data, and more. This README file will guide you through the setup and usage of the website.
 
+## Features
+
+-Player stats: View individual player statistics, including points percentage, rebound percentage, assist percentage, and more.
+
+-Team stats: Explore team performance data, such confrence rank, points rank, and rebound rank.
+
+-Game results: Access the results of past NBA games, including scores, leading scorers, and game summaries.
+
+-Search functionality: Search for specific players by name, position, or jersey number. Search for teams by season year, name, or team confrence in the search bar.
+
+## Need to update and add more!
 VS Code offers [a feature](https://code.visualstudio.com/docs/remote/containers) that lets you use a Docker container as your full-time development environment.
 
 Install the [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack), and then when you open a project that has a `.devcontainer` folder/file, VS Code will prompt you to re-open the project inside a container. This can take several minutes to set up on the initial run, but should be quicker afterwards
@@ -25,19 +36,3 @@ Inside the integrated terminal in VS Code, type
 ```
 flask --debug run
 ```
-
-This will run the server bound to TCP port 5000. You can then make HTTP calls to `http://localhost:5000`
-
-### Connecting to the pgAdmin DBMS instance
-
-You can use the included dbms instance by opening `http://localhost:5050` in a browser window and entering the following credentials:
-
-**username**: `admin@admin.com`
-
-**password**: `root`
-
-Database server credentials from the "Add New Server" dialog):
-
-**Connection -> Host**: `db`
-**Connection -> Username**: `postgres`
-**Connection -> Password**: `postgres`
