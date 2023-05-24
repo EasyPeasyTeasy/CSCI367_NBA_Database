@@ -14,16 +14,16 @@
      outline: 0;
   }
   
-  /*Fonts from external source*/
+  
   @font-face {
     src: url(C:\Users\Home\AppData\Local\Temp\atom-118019-14536-1ea9572.rtm9ozuxr\league-spartan.zip\LeagueSpartan-Bold.otf);
     font-family: League Spartan;
   }
-  /*Fonts from external source*/
+
   
   
   
-  /*Navigation Bar*/
+/*Menu bar*/
   .logo {
     position: absolute;
   
@@ -115,7 +115,7 @@
   
   
   
-  /*Hero Image*/
+ 
   header {
     width: 100vw;
     height: 95vh;
@@ -222,7 +222,7 @@
   }
 
   table {
-    font-size: 10px;
+    font-size: 15px;
   }
   
 
@@ -232,4 +232,56 @@
     padding: 20px;
   }
 
+  /*cards*/
+  
+  .wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards li {
+    border: 2px solid #b4530e;
+    border-radius:5px;
+    background-color: #dda95fa8;
+    color: #fff;
+    flex: 1 1 200px;
+  }
+  
+  .cards h2 {
+    background-color: #b4530e;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .cards p {
+    padding: 10px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  
+  .flex li {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
+    grid-gap: 20px;
+  }
+  
+  #compared{
+    visibility: hidden;
+  }
   

@@ -1,4 +1,15 @@
 <html>
+
+<style>
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    text-align: center;
+  }
+</style>
+
 <title> NBA Tip-Off </title>
 <head>
   <meta charset="utf-8">
@@ -66,7 +77,7 @@
   <table  class="player_table">
     <thead>
       <tr>
-        <th scope="col" target="id">Compare <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
+        <th scope="col" target="id">Compare (Limit 3)<i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
         <th scope="col" target="name"> Name <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></i></th>
         <th scope="col" target="poistion">Position <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
         <th scope="col" target="team">Team <i title="sort " class="fa fa-arrow-down toggleSort" toggle="false"></i></th>
@@ -76,7 +87,7 @@
     <tbody id="results">
       {% for result in user_search %}
         <tr>
-          <td><input type="checkbox" name="name1" />&nbsp;</td>
+          <td><input class = "check" type="checkbox" name="check1" onclick="selected()"/> &nbsp;</td>
           <td>{{result.display_first_last}}</td>
           <td>{{result.position}}</td>
           <td>{{result.team_name}}</td>
@@ -97,6 +108,8 @@
             </select>
           </label>
         </td>
+        
+        <td><button onclick = "location.href = '/compare';" id = "compared">COMPARE</button></td>
       </tr>
     </tfoot>
     
