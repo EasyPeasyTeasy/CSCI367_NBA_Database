@@ -32,7 +32,6 @@
       <li> <a href="/"> HOME </a> </li>
       <li> <a href="/player"> PLAYERS </a> </li>
       <li> <a href="/teams"> TEAMS </a> </li>
-      <li> <a href="/compare"> COMPARE </a> </li>
     </ul>
   </nav>
 <!--Navigation Bar-->
@@ -43,7 +42,7 @@
         
     
         <div class="ptable">
-        <h1>NBA Players</h1>
+        <h1>NBA Teams</h1>
         </div>
         
         
@@ -77,7 +76,6 @@
       <table  class="player_table">
         <thead>
           <tr>
-            <th scope="col" target="id">Compare</th>
             <th scope="col" target="name"> Season Year</th>
             <th scope="col" target="team">Team Name</th>
             <th scope="col" target="team">Team Conference</th>
@@ -99,7 +97,6 @@
         <tbody id="results">
           {% for result in user_search %}
             <tr>
-              <td><input type="checkbox" name="name1" />&nbsp;</td>
               <td>{{result.season_year}}</td>
               <td>{{result.team_name}}</td>
               <td>{{result.team_conference}}</td>
@@ -138,5 +135,4 @@
   
   </body>
   <script src={{ url_for('static', filename='jquery.js') }} type="text/javascript"></script>
-  <script src={{ url_for('static', filename='teamtable.js') }}></script>
   </html>

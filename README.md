@@ -14,7 +14,7 @@ Welcome to the NBA Tip-Off, a Basketball Stats Database Website repository! This
 
 -Search functionality: Search for specific players by name, position, or jersey number. Search for teams by season year, name, or team confrence in the search bar.
 
-## Need to update and add more!
+## Need to update and add more to readme.md for github
 VS Code offers [a feature](https://code.visualstudio.com/docs/remote/containers) that lets you use a Docker container as your full-time development environment.
 
 Install the [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack), and then when you open a project that has a `.devcontainer` folder/file, VS Code will prompt you to re-open the project inside a container. This can take several minutes to set up on the initial run, but should be quicker afterwards
