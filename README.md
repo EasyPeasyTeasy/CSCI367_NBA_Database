@@ -1,4 +1,4 @@
-![NBA Tip-Off Home Page](/workspace/ReadMe Files/NBAtipoffhomepage.png)
+![NBA Tip-Off Home Page](/NBAtipoffhomepage.png)
 
 # NBA Tip-Off: A Basketball Stats Database Website
 
