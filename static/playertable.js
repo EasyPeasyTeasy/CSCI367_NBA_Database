@@ -33,6 +33,21 @@ function selected() {
   console.log(checkedBoxes)
 }
 
+function sendtoCompare() {
+  var checkedBoxes = document.querySelectorAll('input[name=check1]:checked');
+  var teams = [];
+  var players = [];
+  for (var i = 0; i < checkedBoxes.length; i++) {
+    var values = checkedBoxes[i].value.split(",");
+    players.push(values[0]);
+    teams.push(values[1]);
+  }
+  console.log(players);
+  console.log(teams);
+
+  var url = "/compare?name1=" + players[0] + "&name2="+ players[1] + "&name3=" + players[2] + "&team1=" + teams[0]+ "&team2=" + teams[1]+ "&team3=" + teams[2];
+  location.href = url;
+}
 
 const people = [
   { name: 'jim', job: 'sales', age: 27, id: 1 },

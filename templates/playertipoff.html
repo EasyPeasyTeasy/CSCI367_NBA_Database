@@ -87,7 +87,7 @@
     <tbody id="results">
       {% for result in user_search %}
         <tr>
-          <td><input class = "check" type="checkbox" name="check1" onclick="selected()"/> &nbsp;</td>
+          <td><input value = "{{result.display_first_last + ',' +  result.team_name}}" class = "check" type="checkbox" name="check1" onclick="selected()"/> &nbsp;</td>
           <td>{{result.display_first_last}}</td>
           <td>{{result.position}}</td>
           <td>{{result.team_name}}</td>
@@ -109,7 +109,7 @@
           </label>
         </td>
         
-        <td><button onclick = "location.href = '/compare';" id = "compared">COMPARE</button></td>
+        <td><button onclick = "sendtoCompare()" id = "compared">COMPARE</button></td>
       </tr>
     </tfoot>
     

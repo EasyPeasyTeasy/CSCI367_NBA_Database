@@ -1,5 +1,5 @@
 create table if not exists NBA_data_processed(
-    player text primary key, 
+    player text, 
     pos text,
     age int,
     Tm text,
@@ -10,5 +10,6 @@ create table if not exists NBA_data_processed(
     AST float,
     STL float, 
     BLK float, 
-    Pts float
+    Pts float,
+    PRIMARY KEY(player, Tm)
 )

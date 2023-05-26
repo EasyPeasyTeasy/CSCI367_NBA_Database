@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from psycopg2.extras import RealDictCursor
 from player_search import search_player, count_player
 from team_search import search_team, count_team
+from player_compare import compare_player
 import math
 
 SORT_DIRS = {"asc", "desc"}
@@ -76,7 +77,32 @@ def teams():
 
 @app.route('/compare')
 def compare():
-    return render_template('comparetipoff.html')
+    with conn.cursor() as curr:
+        name_1_contains = request.args.get("name1","")
+        name_2_contains = request.args.get("name2","")
+        name_3_contains = request.args.get("name3","")
+
+        team_1_contains = request.args.get("team1", "")
+        team_2_contains = request.args.get("team2", "")
+        team_3_contains = request.args.get("team3", "")
+
+        user_search = compare_player(curr, name_1_contains, name_2_contains, name_3_contains, team_1_contains, team_2_contains, team_3_contains)
+        print(user_search)
+        print(len(name_1_contains))
+        print(len(team_1_contains))
+        names = [name_1_contains, name_2_contains, name_3_contains];
+        no_data = []
+        for n in names:
+            check = False
+            for result in user_search:
+                if n== result['player']:
+                    check = True
+            if check == False:
+                no_data.append({'player': n})
+        return render_template('comparetipoff.html',
+                               names = names,
+                               user_search = user_search,
+                               no_data = no_data)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

@@ -28,45 +28,37 @@
 <header>
   <h1>NBA Player Compare</h1>
   <ul class="grid cards">
-    <li><h2>Player 1</h2>
-      <p>Position: <br></br>
-        Age: <br></br>
-        Team: <br></br>
-        FG%: <br></br>
-        3P%: <br></br>
-        2P%: <br></br>
-        FT%: <br></br>
-        AST: <br></br>
-        STL: <br></br>
-        BLK: <br></br>
-        Pts: <br></br>
+    {% for result in user_search %}
+    <li><h2>{{result['player']}}</h2>
+      <p>Position: {{result['pos']}}<br></br>
+        Age: {{result['age']}} <br></br>
+        Team:  {{result['tm']}}<br></br>
+        FG%: {{result['fg']}} <br></br>
+        3P%: {{result['threep']}} <br></br>
+        2P%:  {{result['twop']}}<br></br>
+        FT%: {{result['ft']}} <br></br>
+        AST: {{result['ast']}} <br></br>
+        STL: {{result['stl']}}<br></br>
+        BLK: {{result['blk']}} <br></br>
+        Pts:  {{result['pts']}}<br></br>
       </p></li>
-    <li><h2>Player 2</h2>
-      <p>Position: <br></br>
-        Age: <br></br>
-        Team: <br></br>
-        FG%: <br></br>
-        3P%: <br></br>
-        2P%: <br></br>
-        FT%: <br></br>
-        AST: <br></br>
-        STL: <br></br>
-        BLK: <br></br>
-        Pts: 
+      {% endfor %}
+
+      {% for result in no_data %}
+    <li><h2>{{result['player']}}</h2>
+      <p>Position: NA<br></br>
+        Age: NA <br></br>
+        Team: NA<br></br>
+        FG%: NA <br></br>
+        3P%: NA<br></br>
+        2P%:  NA<br></br>
+        FT%: NA <br></br>
+        AST: NA <br></br>
+        STL: NA<br></br>
+        BLK: NA <br></br>
+        Pts:  NA<br></br>
       </p></li>
-    <li><h2>Player 3</h2>
-      <p>Position: <br></br>
-        Age: <br></br>
-        Team: <br></br>
-        FG%: <br></br>
-        3P%: <br></br>
-        2P%: <br></br>
-        FT%: <br></br>
-        AST: <br></br>
-        STL: <br></br>
-        BLK: <br></br>
-        Pts: 
-      </p></li>
+      {% endfor %}
 
 </header>
 </body>

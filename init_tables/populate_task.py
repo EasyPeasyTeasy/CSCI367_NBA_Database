@@ -17,6 +17,8 @@ from NBA_date_processed import populate_NBA_data_processed
 
 from common_player_info import populate_common_player_info
 
+from teamconvert import populate_team_convert
+
 
 
 
@@ -49,7 +51,9 @@ POPULATE_TASKS: list[PopulateTask] = [
     PopulateTask("../schema/team_info_common.sql",
                  "../Data/csv_data/team_info_common.csv", populate_team_info_common),
    PopulateTask("../schema/common_player_info.sql",
-                 "../Data/csv_data/common_player_info.csv", populate_common_player_info)
+                 "../Data/csv_data/common_player_info.csv", populate_common_player_info),
+    PopulateTask("../schema/teamconvert.sql",
+                 "../Data/csv_data/teamconvert.csv", populate_team_convert)
    
     
 ]
